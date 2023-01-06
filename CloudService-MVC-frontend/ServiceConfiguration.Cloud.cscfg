@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CloudService_MVC_frontend" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="MVC-webRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=pvedicpocsstorageaccount;AccountKey=$(_pvedicpocsstorageaccount.key_)" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="1e7c25d7-2669-43b0-84d2-3690f07a68d1" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="WCF-webRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=pvedicpocsstorageaccount;AccountKey=$(_pvedicpocsstorageaccount.key_)" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="1e7c25d7-2669-43b0-84d2-3690f07a68d1" />
+    </ConfigurationSettings>
+  </Role>
+  <NetworkConfiguration>
+    <VirtualNetworkSite name="cloudservice_mvc_frontendVNet" />
+    <AddressAssignments>
+      <InstanceAddress roleName="MVC-webRole">
+        <Subnets>
+          <Subnet name="WebTier" />
+        </Subnets>
+      </InstanceAddress>
+      <InstanceAddress roleName="WCF-webRole">
+        <Subnets>
+          <Subnet name="WebTier" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

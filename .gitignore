@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/EDIC-POCs
+/CloudService-MVC-frontend/bin
+/CloudService-MVC-frontend/csx/Release
+/CloudService-MVC-frontend/MVC-webRoleContent
+/CloudService-MVC-frontend/obj
+/CloudService-MVC-frontend/WCF-webRoleContent
+*.user
+/MVC-frontend/bin
+/WCF-webRole/bin
+/WCF-webRole/obj
+/REST-host/bin/Release/net6.0
+/REST-host/obj
+/packages
+/MVC-webRole/bin
+/MVC-webRole/obj

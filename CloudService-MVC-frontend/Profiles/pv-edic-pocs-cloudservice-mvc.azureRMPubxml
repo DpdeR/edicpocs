@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AzureCredentials>{"ServiceManagementEndpoint":"https:\/\/management.core.windows.net\/","ResourceManagementEndpoint":"https:\/\/management.azure.com\/","SubscriptionId":"131d3298-6c44-47a2-8cd0-191cc1b19f10"}</AzureCredentials>
+    <AzureDeploymentLabel>CloudService-MVC-frontend</AzureDeploymentLabel>
+    <AzureEnableRemoteDesktop>False</AzureEnableRemoteDesktop>
+    <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
+    <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
+    <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <EnableApplicationInsights>True</EnableApplicationInsights>
+    <AzureRMCloudServiceV2Name>pv-edic-pocs-cloudservice-mvc</AzureRMCloudServiceV2Name>
+    <AzureRMCloudServiceV2ResourceGroupName>PV-EDIC-POCS</AzureRMCloudServiceV2ResourceGroupName>
+    <AzureRMCloudServiceV2Location>{"Name":"westeurope","DisplayName":"West Europe"}</AzureRMCloudServiceV2Location>
+    <AzureRMKeyVaultName />
+    <AzureRMKeyVaultResourceGroupName />
+    <AzureRMKeyVaultLocation />
+    <AzureRMStorageAccountName>pvedicpocsstorageaccount</AzureRMStorageAccountName>
+    <AzureRMStorageAccountResourceGroupName>pv-edic-pocs</AzureRMStorageAccountResourceGroupName>
+    <AzureRMStorageAccountLocation>{"Name":"westeurope","DisplayName":"West Europe"}</AzureRMStorageAccountLocation>
+    <AzureRMSwappableCloudServiceV2Name />
+    <AzureRMSwappableCloudServiceV2ResourceGroupName />
+    <AzureRMSwappableCloudServiceV2Location />
+  </PropertyGroup>
+</Project>
