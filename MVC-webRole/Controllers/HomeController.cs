@@ -1,4 +1,4 @@
-﻿using MVC_webRole.ServiceReference1;
+﻿using MVC_webRole.WCFServiceReference;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -27,7 +27,7 @@ namespace MVC_webRole.Controllers
 
         public ActionResult Data() 
         {
-            var client = new Service1Client();
+            var client = new ServiceClient();
             var data = client.GetDataUsingDataContract(
                 new CompositeType() { StringValue = "Hello from MVC ", BoolValue = true });
             var dataList = new List<CompositeType>() { data };

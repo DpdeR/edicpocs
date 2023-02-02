@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVC_webRole.ServiceReference1 {
+namespace MVC_webRole.WCFServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -75,46 +75,46 @@ namespace MVC_webRole.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
-    public interface IService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFServiceReference.IService")]
+    public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
         string GetData(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        MVC_webRole.ServiceReference1.CompositeType GetDataUsingDataContract(MVC_webRole.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
+        MVC_webRole.WCFServiceReference.CompositeType GetDataUsingDataContract(MVC_webRole.WCFServiceReference.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<MVC_webRole.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(MVC_webRole.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
+        System.Threading.Tasks.Task<MVC_webRole.WCFServiceReference.CompositeType> GetDataUsingDataContractAsync(MVC_webRole.WCFServiceReference.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : MVC_webRole.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IServiceChannel : MVC_webRole.WCFServiceReference.IService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<MVC_webRole.ServiceReference1.IService1>, MVC_webRole.ServiceReference1.IService1 {
+    public partial class ServiceClient : System.ServiceModel.ClientBase<MVC_webRole.WCFServiceReference.IService>, MVC_webRole.WCFServiceReference.IService {
         
-        public Service1Client() {
+        public ServiceClient() {
         }
         
-        public Service1Client(string endpointConfigurationName) : 
+        public ServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public Service1Client(string endpointConfigurationName, string remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -126,11 +126,11 @@ namespace MVC_webRole.ServiceReference1 {
             return base.Channel.GetDataAsync(value);
         }
         
-        public MVC_webRole.ServiceReference1.CompositeType GetDataUsingDataContract(MVC_webRole.ServiceReference1.CompositeType composite) {
+        public MVC_webRole.WCFServiceReference.CompositeType GetDataUsingDataContract(MVC_webRole.WCFServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<MVC_webRole.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(MVC_webRole.ServiceReference1.CompositeType composite) {
+        public System.Threading.Tasks.Task<MVC_webRole.WCFServiceReference.CompositeType> GetDataUsingDataContractAsync(MVC_webRole.WCFServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }
